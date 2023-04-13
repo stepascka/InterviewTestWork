@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FigureLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:FigureLibrary.Constants.CalculationError">
+            <summary>
+            Погрешность вычислений
+            </summary>
+        </member>
+        <member name="F:FigureLibrary.Constants.CalculationError.CALCULATION_ERROR">
+            <summary>Погрешность вычислений по умолчанию</summary>
+        </member>
+        <member name="T:FigureLibrary.Constants.ValuePI">
+            <summary>
+            Значение Пи
+            </summary>
+        </member>
+        <member name="F:FigureLibrary.Constants.ValuePI.PI">
+            <summary>Число Пи</summary>
+        </member>
+        <member name="T:FigureLibrary.DataValidations.CalculationErrorDataValidation">
+            <summary>
+            Проверка данных 
+            <b>Погрешности вычислений</b>
+            </summary>
+        </member>
+        <member name="M:FigureLibrary.DataValidations.CalculationErrorDataValidation.CheckCalculationErrorAboveZero(System.Double)">
+            <summary>
+            Проверка погрешности вычислений на соответствие: значение больше нуля
+            </summary>
+            <param name="calculationError">Погрешность вычислений</param>
+            <returns>Признак проверки</returns>
+        </member>
+        <member name="M:FigureLibrary.DataValidations.CalculationErrorDataValidation.CheckRoundingDigitAboveZero(System.Int32)">
+            <summary>
+            Проверка разрядя округления выходных значений на соответствие: значение больше нуля
+            </summary>
+            <param name="roundingDigit">Разряд округления выходных значений</param>
+            <returns>Признак проверки</returns>
+        </member>
+        <member name="T:FigureLibrary.DataValidations.CircleDataValidation">
+            <summary>
+            Проверка данных 
+            <b>Круга</b>
+            </summary>
+        </member>
+        <member name="M:FigureLibrary.DataValidations.CircleDataValidation.CheckRadiusAboveZero(System.Double)">
+            <summary>
+            Проверка круга на соответствие: значение радиуса больше нуля
+            </summary>
+            <param name="radius">Радиус круга</param>
+            <returns>Признак проверки</returns>
+        </member>
+        <member name="T:FigureLibrary.DataValidations.TriangleDataValidation">
+            <summary>
+            Проверка данных 
+            <b>Треугольника</b>
+            </summary>
+        </member>
+        <member name="M:FigureLibrary.DataValidations.TriangleDataValidation.CheckSidesAboveZero(FigureLabrary.Items.TriangleParams)">
+            <summary>
+            Проверка треугольника на соответствие: значение сторон больше нуля
+            </summary>
+            <param name="triangleParams">Параметры треугольника</param>
+            <returns>Признак проверки</returns>
+        </member>
+        <member name="M:FigureLibrary.DataValidations.TriangleDataValidation.CheckSidesSumm(FigureLabrary.Items.TriangleParams)">
+            <summary>
+            Проверка треугольника на соответствие: сторона меньше суммы двух остальных
+            </summary>
+            <param name="triangleParams">Параметры треугольника</param>
+            <returns>Признак проверки</returns>
+        </member>
+        <member name="T:FigureLibrary.Figures.Circle">
+            <summary>
+            Круг
+            </summary>
+        </member>
+        <member name="P:FigureLibrary.Figures.Circle.PI">
+            <summary>Число Пи</summary>
+        </member>
+        <member name="P:FigureLibrary.Figures.Circle.Radius">
+            <summary>Радиус круга</summary>
+        </member>
+        <member name="M:FigureLibrary.Figures.Circle.#ctor(System.Double,System.Nullable{System.Double},System.Nullable{System.Int32},System.Boolean)">
+            <summary>
+            Конструктор 
+            <b>Круга</b>
+            </summary>
+            <param name="radius">Радиус</param>
+            <param name="calculationError">Погрешность вычислений</param>
+            <param name="roundingDigit">Разряд округления выходных значений</param>
+            <param name="determineErrorByRoundingDigit">Определение погрешности вычислений по разряду округления</param>
+        </member>
+        <member name="M:FigureLibrary.Figures.Circle.#ctor(System.Double,System.Int32,System.Boolean)">
+            <summary>
+            Конструктор 
+            <b>Круга</b>
+            </summary>
+            <param name="radius">Радиус</param>
+            <param name="roundingDigit">Разряд округления выходных значений</param>
+            <param name="determineErrorByRoundingDigit">Определение погрешности вычислений по разряду округления</param>
+        </member>
+        <member name="M:FigureLibrary.Figures.Circle.Data(System.Action{System.String})">
+            <summary>
+            <inheritdoc/>
+            <b>Круга</b>
+            </summary>
+            <param name="func"><inheritdoc/></param>
+        </member>
+        <member name="M:FigureLibrary.Figures.Circle.Area">
+            <summary>
+            <inheritdoc/>
+            <b>Круга</b>
+            </summary>
+            <returns><inheritdoc/></returns>
+        </member>
+        <member name="M:FigureLibrary.Figures.Circle.Check">
+            <summary>
+            Проверка данных 
+            <b>Круга</b>
+            </summary>
+        </member>
+        <member name="T:FigureLibrary.Figures.Figure">
+            <summary>
+            Фигура
+            </summary>
+        </member>
+        <member name="P:FigureLibrary.Figures.Figure.CalculationError">
+            <summary>Погрешность вычислений</summary>
+        </member>
+        <member name="P:FigureLibrary.Figures.Figure.RoundingDigit">
+            <summary>Разряд округления выходных значений</summary>
+        </member>
+        <member name="M:FigureLibrary.Figures.Figure.#ctor(System.Nullable{System.Double},System.Nullable{System.Int32},System.Boolean)">
+            <summary>Конструктор</summary>
+            <param name="calculationError">Погрешность вычислений</param>
+            <param name="roundingDigit">Разряд округления выходных значений</param>
+            <param name="determineErrorByRoundingDigit">Определение погрешности вычислений по разряду округления</param>
+        </member>
+        <member name="M:FigureLibrary.Figures.Figure.Data(System.Action{System.String})">
+            <summary>
+            <inheritdoc/>
+            </summary>
+            <param name="func"><inheritdoc/></param>
+        </member>
+        <member name="M:FigureLibrary.Figures.Figure.Area">
+            <summary>
+            <inheritdoc/>
+            </summary>
+            <returns><inheritdoc/></returns>
+        </member>
+        <member name="M:FigureLibrary.Figures.Figure.Check">
+            <summary>
+            Проверка данных 
+            <b>Фигуры</b>
+            </summary>
+        </member>
+        <member name="T:FigureLibrary.Figures.Triangle">
+            <summary>
+            Трегольник
+            </summary>
+        </member>
+        <member name="P:FigureLibrary.Figures.Triangle.Params">
+            <summary>Параметры треугольника</summary>
+        </member>
+        <member name="M:FigureLibrary.Figures.Triangle.#ctor(System.Double,System.Double,System.Double,System.Nullable{System.Double},System.Nullable{System.Int32},System.Boolean)">
+            <summary>
+            Конструктор 
+            <b>Треугольника</b>
+            </summary>
+            <param name="side1">Сторона треугольника 1</param>
+            <param name="side2">Сторона треугольника 2</param>
+            <param name="side3">Сторона треугольника 3</param>
+            <param name="calculationError">Погрешность вычислений</param>
+            <param name="roundingDigit">Разряд округления выходных значений</param>
+            <param name="determineErrorByRoundingDigit">Определение погрешности вычислений по разряду округления</param>
+        </member>
+        <member name="M:FigureLibrary.Figures.Triangle.#ctor(System.Double,System.Double,System.Double,System.Int32,System.Boolean)">
+            <summary>
+            Конструктор 
+            <b>Треугольника</b>
+            </summary>
+            <param name="side1">Сторона треугольника 1</param>
+            <param name="side2">Сторона треугольника 2</param>
+            <param name="side3">Сторона треугольника 3</param>
+            <param name="roundingDigit">Разряд округления выходных значений</param>
+            <param name="determineErrorByRoundingDigit">Определение погрешности вычислений по разряду округления</param>
+        </member>
+        <member name="M:FigureLibrary.Figures.Triangle.Data(System.Action{System.String})">
+            <summary>
+            <inheritdoc/>
+            <b>Треугольника</b>
+            </summary>
+            <param name="func"><inheritdoc/></param>
+        </member>
+        <member name="M:FigureLibrary.Figures.Triangle.Area">
+            <summary>
+            <inheritdoc/>
+            <b>Треугольника</b>
+            </summary>
+            <returns><inheritdoc/></returns>
+        </member>
+        <member name="M:FigureLibrary.Figures.Triangle.SemiPerimeter">
+            <summary>
+            Вычисление полу-периметра 
+            <b>Треугольника</b>
+            </summary>
+            <returns>Полу-периметр треугольника</returns>
+        </member>
+        <member name="M:FigureLibrary.Figures.Triangle.IsRightTriangle">
+            <inheritdoc/>
+        </member>
+        <member name="M:FigureLibrary.Figures.Triangle.Check">
+            <summary>
+            Проверка данных 
+            <b>Треугольника</b>
+            </summary>
+        </member>
+        <member name="T:FigureLibrary.IFigure">
+            <summary>
+            Интерфейс для фигур
+            </summary>
+        </member>
+        <member name="M:FigureLibrary.IFigure.Area">
+            <summary>
+            Вычисление площади
+            </summary>
+            <returns>Площадь фигуры</returns>
+        </member>
+        <member name="M:FigureLibrary.IFigure.Data(System.Action{System.String})">
+            <summary>
+            Данные
+            </summary>
+            <param name="func">Метод для работы с данными</param>
+        </member>
+        <member name="T:FigureLibrary.ITriangle">
+            <summary>
+            Интерфейс для треугольников
+            </summary>
+        </member>
+        <member name="M:FigureLibrary.ITriangle.IsRightTriangle">
+            <summary>
+            Определение признака прямоугольности треугольника
+            </summary>
+            <returns>Признак прямоугольности треугольника</returns>
+        </member>
+        <member name="T:FigureLabrary.Items.TriangleParams">
+            <summary>
+            Параметры треугольника
+            </summary>
+        </member>
+        <member name="P:FigureLabrary.Items.TriangleParams.Sides">
+            <summary>Стороны треугольника</summary>
+        </member>
+        <member name="P:FigureLabrary.Items.TriangleParams.MaxSide">
+            <summary>Максимальная по значению сторона</summary>
+        </member>
+        <member name="M:FigureLabrary.Items.TriangleParams.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Конструктор
+            <b>Параметров треугольника</b>
+            </summary>
+            <param name="side1">Сторона треугольника 1</param>
+            <param name="side2">Сторона треугольника 2</param>
+            <param name="side3">Сторона треугольника 3</param>
+        </member>
+    </members>
+</doc>

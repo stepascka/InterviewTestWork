@@ -39,7 +39,7 @@ VALUES
 	,(3, 2)
 	,(4, 3);
 
---request
+--query
 SELECT 
 	p.name as ProductName
 	,c.name as CategoryName
